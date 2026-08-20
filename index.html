@@ -151,6 +151,7 @@
             <button class="clear" onclick="clearDisplay()">C</button>
             <button class="btn-func" onclick="deleteLast()">⌫</button>
             <button class="btn-func" onclick="appendValue('%')">%</button>
+            <button class="btn-func" onclick="squareNumber()">x²</button>
             <button class="operator" onclick="appendValue('/')">÷</button>
 
             <button onclick="appendValue('7')">7</button>
@@ -188,6 +189,17 @@
 
         function deleteLast() {
             display.value = display.value.slice(0, -1);
+        }
+
+        function squareNumber() {
+            const number = Number(display.value);
+
+            if (!display.value || !Number.isFinite(number)) {
+                display.value = "Error";
+                return;
+            }
+
+            display.value = number ** 2;
         }
 
         function calculate() {
