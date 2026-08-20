@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Tharun</title>
+    <style>
+        :root {
+            --ink: #1f2937;
+            --muted: #667085;
+            --paper: #f6f7fb;
+            --accent: #ff7043;
+            --panel: rgba(255, 255, 255, 0.88);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            background:
+                radial-gradient(circle at 15% 20%, #ffd7c7 0, transparent 28%),
+                radial-gradient(circle at 85% 80%, #d8e6ff 0, transparent 30%),
+                var(--paper);
+            color: var(--ink);
+            font-family: Georgia, 'Times New Roman', serif;
+        }
+
+        .intro {
+            width: min(100%, 560px);
+            padding: 56px 44px;
+            text-align: center;
+            background: var(--panel);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 24px;
+            box-shadow: 0 24px 70px rgba(44, 51, 73, 0.14);
+            backdrop-filter: blur(12px);
+        }
+
+        .intro::before {
+            content: '';
+            width: 54px;
+            height: 6px;
+            display: block;
+            margin: 0 auto 24px;
+            border-radius: 99px;
+            background: var(--accent);
+        }
+
+        h2 {
+            margin: 0;
+            font-size: clamp(28px, 6vw, 44px);
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+        }
+
+        .subtitle {
+            margin: 18px 0 0;
+            color: var(--muted);
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 480px) {
+            .intro {
+                padding: 42px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="intro">
+        <h2>Hello everyone, my name is Tharun.</h2>
+        <p class="subtitle">Nice to meet you</p>
+    </main>
+</body>
+</html>
