@@ -242,6 +242,7 @@
             <button class="btn-func" onclick="deleteLast()">⌫</button>
             <button class="btn-func" onclick="appendValue('%')">%</button>
             <button class="btn-func" onclick="squareNumber()">x²</button>
+            <button class="btn-func" onclick="squareRootNumber()">√</button>
             <button class="operator" onclick="appendValue('/')">÷</button>
 
             <button onclick="appendValue('7')">7</button>
@@ -298,6 +299,17 @@
             }
 
             display.value = number ** 2;
+        }
+
+        function squareRootNumber() {
+            const number = Number(display.value);
+
+            if (!display.value || !Number.isFinite(number) || number < 0) {
+                display.value = "Error";
+                return;
+            }
+
+            display.value = Math.sqrt(number);
         }
 
         function calculate() {
